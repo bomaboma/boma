@@ -1,7 +1,6 @@
 ---
   - name: Playbook to install apache2
     hosts: all
-    become: yes
-    
+    become: true
     roles:
-      - install
+     - install
