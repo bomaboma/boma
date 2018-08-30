@@ -1,0 +1,11 @@
+---
+- name: Software Install Playbook
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Software install
+      yum: name=httpd state=latest
+    
+    - name: Start Apache
+      service: name=httpd state=enabled
